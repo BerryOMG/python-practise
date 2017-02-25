@@ -1,0 +1,16 @@
+import os
+
+def rename_files():
+    filename=os.listdir("/Users/ming/Desktop/coding/stage3/mini_project")
+    path=os.getcwd()
+    print ("the current path is: "+path)
+    os.chdir("/Users/ming/Desktop/coding/stage3/mini_project")
+    table=str.maketrans("","","0123456789")
+
+    for name in filename:
+        
+        os.rename(name, name.translate(table))
+
+rename_files()
+
+
